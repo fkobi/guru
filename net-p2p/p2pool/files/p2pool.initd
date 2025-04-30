@@ -34,7 +34,7 @@ start_pre() {
 	if [ -z ${P2POOL_WALLET} ]; then
 		eerror "p2pool cannot be started without a wallet address"
 		eerror "Please set P2POOL_WALLET in /etc/conf.d/p2pool"
-		false
+		return 1
 	fi
 	einfo "Will mine for wallet ${P2POOL_WALLET}"
 	checkpath --owner ${P2POOL_USER}:${P2POOL_GROUP} \
