@@ -2,7 +2,8 @@
 # Copyright 1999-2025 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-description="Decentralized Monero mining pool daemon"
+description="Decentralized Monero mining pool"
+name="P2Pool local pool daemon"
 command="/usr/bin/${RC_SVCNAME}"
 command_background=1
 command_progress=1
