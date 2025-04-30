@@ -32,7 +32,7 @@ depend() {
 
 start_pre() {
 	if [ -z ${P2POOL_WALLET} ]; then
-		eerror "p2pool cannot be started without a wallet address"
+		eerror "P2Pool cannot be started without a wallet address"
 		eerror "Please set P2POOL_WALLET in /etc/conf.d/p2pool"
 		return 1
 	fi
