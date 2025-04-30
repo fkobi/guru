@@ -20,7 +20,7 @@ P2POOL_LOGLEVEL="${P2POOL_LOGLEVEL:=1}"
 command_args="--wallet ${P2POOL_WALLET} \
 	--loglevel ${P2POOL_LOGLEVEL} \
 	--data-dir ${P2POOL_DATADIR} \
-	${P2POOL_OPTS} \
+	'${P2POOL_OPTS}' \
 "
 command_user="${P2POOL_USER:=monero}:${P2POOL_GROUP:=monero}"
 
