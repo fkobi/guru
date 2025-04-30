@@ -40,8 +40,5 @@ start_pre() {
 	checkpath --owner ${P2POOL_USER}:${P2POOL_GROUP} \
 		--directory ${P2POOL_DATADIR}
 
-	if [ -z $P2POOL_KEEPLOG ]; then
-		rm --force "${P2POOL_DATADIR}/p2pool.log"
-	fi
-
+	[ -n $P2POOL_KEEPLOG ] || rm -f "${P2POOL_DATADIR}"/p2pool.log
 }
