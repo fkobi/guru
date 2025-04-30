@@ -7,7 +7,7 @@ command="/usr/bin/${RC_SVCNAME}"
 command_background=1
 command_progress=1
 pidfile="/run/${RC_SVCNAME}.pid"
-retry="SIGTERM/30/SIGKILL/5" # shutting down takes 30s
+retry="SIGTERM/31/SIGKILL/5" # shutting down takes 30s
 
 P2POOL_HOST=${P2POOL_HOST:-127.0.0.1}
 P2POOL_DATADIR=${P2POOL_DATADIR:-/var/lib/p2pool}
