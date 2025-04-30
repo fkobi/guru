@@ -37,8 +37,7 @@ start_pre() {
 		return 1
 	fi
 	einfo "Will mine for wallet ${P2POOL_WALLET}"
-	checkpath --owner ${P2POOL_USER}:${P2POOL_GROUP} \
-		--directory ${P2POOL_DATADIR}
+	checkpath --owner ${command_user} --directory ${P2POOL_DATADIR}
 
 	[ -n $P2POOL_KEEPLOG ] || rm -f "${P2POOL_DATADIR}"/p2pool.log
 }
