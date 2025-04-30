@@ -16,7 +16,6 @@ P2POOL_WALLET=""
 #P2POOL_NICE=5
 #P2POOL_IONICE=2:4 # See START-STOP-DAEMON(8) for details
 
-#P2POOL_UMASK=007
 
 # Uncomment to have a persistent log.
 # This is not recommended as it does not rotate.
@@ -24,3 +23,5 @@ P2POOL_WALLET=""
 
 # Extra options passed to the daemon
 #P2POOL_OPTS="--mini"
+
+#umask=007
