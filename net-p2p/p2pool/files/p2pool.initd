@@ -6,6 +6,7 @@ description="Decentralized Monero mining pool daemon"
 command="/usr/bin/${RC_SVCNAME}"
 command_background=1
 command_progress=1
+command_user="${P2POOL_USER:=monero}:${P2POOL_GROUP:=monero}"
 pidfile="/run/${RC_SVCNAME}.pid"
 retry="SIGTERM/31/SIGKILL/5" # shutting down takes 30s
 umask="${umask:=007}"
@@ -22,7 +23,6 @@ command_args="--wallet ${P2POOL_WALLET} \
 	--data-dir ${P2POOL_DATADIR} \
 	'${P2POOL_OPTS}' \
 "
-command_user="${P2POOL_USER:=monero}:${P2POOL_GROUP:=monero}"
 
 depend() {
 	need net
